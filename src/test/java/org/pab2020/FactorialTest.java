@@ -1,0 +1,47 @@
+package org.pab2020;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+public class FactorialTest
+{
+    @Test
+    public void shouldFactorial0return1(){
+        Factorial factorial = new Factorial();
+        int result = factorial.compute(0);
+        int expectedValue = 1;
+        assertEquals(expectedValue,result);
+    }
+
+    @Test
+    public void shouldFactorial1return1(){
+        Factorial factorial = new Factorial();
+        int result = factorial.compute(1);
+        int expectedValue = 1;
+        assertEquals(expectedValue,result);
+    }
+
+    @Test
+    public void shouldFactorial2return2(){
+        Factorial factorial = new Factorial();
+        int result = factorial.compute(2);
+        int expectedValue = 2;
+        assertEquals(expectedValue,result);
+    }
+    @Test
+    public void shouldFactorial_return___(){
+        Factorial factorial = new Factorial();
+        int result = factorial.compute(5);
+        int expectedValue = 120;
+        assertEquals(expectedValue,result);
+    }
+    @Test
+    public void shouldFactorialNegReturn___(){
+        Factorial factorial = new Factorial();
+        assertThrows(RuntimeException.class, ()->factorial.compute(-1));
+    }
+
+
+}
