@@ -49,16 +49,5 @@ public class FactorialTest
         int expectedValue = 3628800;
         assertEquals(expectedValue,result);
     }
-    @Test
-    public void Factorial_12(){
-        Factorial factorial = new Factorial();
-        int result = factorial.compute(12);
-        System.out.println(result);
-    }
-    @Test
-    public void Factorial_11(){
-        Factorial factorial = new Factorial();
-        int result = factorial.compute(13);
-        System.out.println(result);
-    }
+
 }
